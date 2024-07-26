@@ -1,0 +1,720 @@
+/* General Styles */
+* {
+  /* padding: 0;
+  margin: 0; */
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+header {
+  width: 100%;
+  height: 100px; /* Reduced header height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #040303;
+  color: white;
+  box-sizing: border-box;
+  /* border-bottom: 1px solid white; */
+}
+
+/* Logo Styles */
+header .logo {
+  position: relative;
+}
+
+header .logo img {
+  position: relative;
+  height: 150px; /* Height may need adjustment for smaller screens */
+  top: 3vh;
+  mix-blend-mode: difference;
+}
+
+header .logo::before {
+  position: absolute;
+  content: "";
+  width: 130px;
+  height: 130px;
+  background-color: #8ee5ed;
+  top: 30px;
+  left: 10px;
+  opacity: .7;
+  transition: 1s all ease;
+  transform: rotate(45deg);
+}
+
+
+header .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto; /* Align nav list to the right */
+}
+
+header .nav-list .list-item a {
+  text-decoration: none;
+  color: #cdf3f8;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+header .toggle {
+  display: none;
+  cursor: pointer;
+}
+
+header .icons {
+display: none; /* Hide close icon by default */
+}
+
+header .icons .fa-times {
+  /* display: none; */
+  position: fixed;
+font-size: 2rem;
+color: white;
+cursor: pointer;
+}
+
+/* Content Container Styles */
+.content-container {
+  width: 100%;
+  height: calc(100vh - 60px); /* Adjust height to account for header height */
+  display: flex;
+  top: -vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  /* background-color: #cdf3f8; */
+  background-color: #040303;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: 500px;
+  position: relative;
+  top: -10vh;
+  display: flex;
+  left: 6%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-top: 30vh;
+  color: #cdf3f8;
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: whitesmoke;
+}
+
+.button-div {
+  position: relative;
+  margin-top: 10vh;
+  text-align: center;
+  right: 7%;
+}
+
+.button-div button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  background-color: #95e6eddc;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.button-div button:hover {
+  background-color: #95e6ed91;
+}
+
+.button-div #resume  a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.button-div button a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+
+   .content-container .img {
+    position: relative;
+    /* background-color: #039593; */
+    right: 10%;
+    background-image: url(./images/glimph4.jpg);
+    width: 35vw;
+    height: 35vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    height: auto; /* Adjust height for mobile view */
+    padding: 10px;
+  }
+
+  header .logo img {
+    height: 100px; /* Adjust logo height for smaller screens */
+    top: 0;
+  }
+
+  header .logo::before {
+    width: 100px; /* Adjust pseudo-element size */
+    height: 100px;
+    top: 13px;
+    left: 1px;
+  }
+
+  .content-container .img {
+  display: none;
+  }
+
+  header .nav-list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(137, 190, 185);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease;
+    margin-bottom: 2%;
+    font-weight: 700;
+    font-size: 2rem;
+    z-index: 9999; /* Ensure it appears over other content */
+  }
+
+ 
+
+  header .nav-list.show {
+    left: 0;
+  }
+
+  header .toggle {
+    display: block;
+    position: absolute;
+    right: 20px; /* Position the toggle icon on the right */
+    font-size: 2rem;
+    color: white;
+  }
+
+  header .icons .fa-times {
+      position: fixed;
+      display: block;
+      top: 10%;
+      right: 2%;
+      font-size: 2rem;
+      color: rgb(225, 225, 225);
+      cursor: pointer;
+      z-index: 3333333;
+    }
+
+  .content-container {
+    flex-direction: column;
+    text-align: center;
+    height: auto; /* Adjust height for mobile view */
+  }
+
+  .content {
+    max-width: 100%;
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content-container .img {
+    height: 50vh; /* Adjust height for mobile view */
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+
+
+/* Internship Section Styles */
+.internship {
+  margin-top: 1px;
+  padding: 20px;
+  background-color: #040303;
+  color: #7aeaf9;
+}
+
+.internship-content {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.internship-heading {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.internship-company {
+  font-size: 1.2rem;
+  color: #708082;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-item {
+  /* background-color: #1b1b1b; */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 1s all ease;
+}
+
+.project-item:hover {
+  background: linear-gradient(45deg, #3a3a3a, #5d5d5d);
+  transform: scale(1.05);
+}
+
+
+
+.project-item.left {
+  align-self: flex-start;
+}
+
+.project-item.right {
+  align-self: flex-end;
+}
+
+.project-item h2 {
+  font-size: 1.8rem;
+  color: #8ee5ed;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Responsive Design for Internship Section */
+@media (max-width: 768px) {
+  .internship-content {
+      width: 80%;
+      padding: 0 20px;
+  }
+}
+
+
+
+
+
+
+/* Projects Section Styles */
+/* My Projects Section Styles */
+.myprojects {
+  padding: 30px;
+  background-color: #040303;
+  margin-top: 1px; /* Space above the section */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.myprojects-heading {
+  font-size: 2.5rem;
+  color: #708082; /* Blue color for the heading */
+  margin-bottom: 20px;
+  text-align: center; /* Center-align the heading */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Spacing between letters */
+}
+
+.myprojects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between project items */
+}
+
+.myproject-item {
+  background-color: #040303; /* White background for each project item */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.myproject-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.myproject-item:hover::before {
+  background: linear-gradient(45deg, #424242, #c2c2c2);
+  opacity: 0.8;
+}
+
+.myproject-content {
+  position: relative;
+  z-index: 1; /* Ensure content is above gradient */
+}
+
+.myproject-item h3 {
+  font-size: 1.8rem;
+  color: #7aeaf9; /* Blue color for project titles */
+  margin-bottom: 10px;
+}
+
+.myproject-content h4 {
+  color: white;
+}
+
+.myproject-item p {
+  font-size: 1.1rem;
+  color: white; /* Grey text color for descriptions */
+  font-weight: 600;
+}
+
+.project-link {
+  text-decoration: none;
+  color: #7aeaf9; /* Color for links */
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #cddeec; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .myprojects {
+      padding: 20px;
+  }
+
+  .myproject-item {
+      padding: 15px;
+      margin-bottom: 15px; /* Space between items on small screens */
+  }
+}
+
+
+
+
+/* Achievements Section */
+.achievements {
+  margin-top: 1px;
+  padding: 20px;
+  background-color: #040303;
+  text-align: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#main-heading {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.scrolling-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+}
+
+.scrolling-container::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  flex: 0 0 300px;
+  border-radius: 10px;
+  background-color: #040303;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.item h1 {
+  position: relative;
+  text-align: center;
+  top: 10%;
+}
+
+.pic {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+/* Add your specific image URLs */
+#pic-1 {
+  background-image: url(./images/CSA\ Certificate.jpg);
+}
+
+#pic-2 {
+  background-image: url(./images/Hacathon.jpg);
+}
+
+#pic-3 {
+  background-image: url(./images/Volleyball.jpg);
+}
+
+#pic-4 {
+  background-image: url(./images/codesoft.jpg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scrolling-container {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 400px;
+  }
+
+  .item {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Interests Section */
+.interests {
+  margin-top: 1px;
+  padding: 20px;
+  background-color: #040303;
+  text-align: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#interests-heading {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.interests-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.interest-item {
+  background-color: #040303;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+  position: relative; /* Needed for gradient border */
+  overflow: hidden; /* Ensure pseudo-element doesn't cause overflow */
+}
+
+.interest-item::before {
+  content: '';
+  position: absolute;
+  top: -2px; bottom: -2px; left: -2px; right: -2px; /* Adjusted for exact fit */
+  z-index: -1;
+  background: linear-gradient(45deg, #dcd6d9, #78787f, #b2dcd3);
+  border-radius: 12px; /* Slightly larger than the box itself */
+}
+
+
+.interest-item:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.interest-icon {
+  font-size: 3rem;
+  color: #8ee5ed;
+  margin-bottom: 10px;
+  animation: icon-bounce 2s infinite;
+}
+
+@keyframes icon-bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+.interest-text h2 {
+  font-size: 1.5rem;
+  color: #11ebe8;
+  margin-bottom: 10px;
+}
+
+.interest-text p {
+  font-size: 1rem;
+  color: #565656;
+}
+
+/* Responsive Design for Interests Section */
+@media (max-width: 768px) {
+
+  .interests {
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 170vh;
+  }
+  .interests-content {
+      flex-direction: column;
+  }
+}
+
+
+
+
+
+/* Contact Section */
+.contact {
+  margin-top: 1px;
+  padding: 20px;
+  background-color: #040303;
+  text-align: center;
+}
+
+#contact-heading {
+  font-size: 2.5rem;
+  color: #a5a5a5;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #040303;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #8ee5ed;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  color: white;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #49f0ff;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #84e6efa2;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #039593;
+}
+
+/* Footer Styles */
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+  .contact-form {
+      width: 80%;
+      padding: 0 20px;
+  }
+}
