@@ -704,7 +704,7 @@ button[type="submit"]:hover {
 
 .social-icon {
   text-decoration: none;
-  color: white;
+  color: green;
   font-size: 35px; /* Icon size */
   transition: color 0.3s; /* Smooth color transition on hover */
   animation: bounce 3s linear infinite; /* Apply animation */
