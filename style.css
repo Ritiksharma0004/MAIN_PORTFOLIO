@@ -51,11 +51,10 @@ header .logo::before {
   background-color: #8ee5ed;
   top: 30px;
   left: 10px;
-  opacity: .7;
+  opacity: 0.7;
   transition: 1s all ease;
   transform: rotate(45deg);
 }
-
 
 header .nav-list {
   list-style: none;
@@ -79,15 +78,15 @@ header .toggle {
 }
 
 header .icons {
-display: none; /* Hide close icon by default */
+  display: none; /* Hide close icon by default */
 }
 
 header .icons .fa-times {
   /* display: none; */
   position: fixed;
-font-size: 2rem;
-color: white;
-cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 }
 
 /* Content Container Styles */
@@ -146,7 +145,7 @@ cursor: pointer;
   background-color: #95e6ed91;
 }
 
-.button-div #resume  a {
+.button-div #resume a {
   text-decoration: none;
   color: white;
   font-weight: 600;
@@ -158,22 +157,19 @@ cursor: pointer;
   font-weight: 600;
 }
 
-
-   .content-container .img {
-    position: relative;
-    /* background-color: #039593; */
-    right: 10%;
-    background-image: url(./images/glimph4.jpg);
-    width: 35vw;
-    height: 35vw;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    object-fit: cover;
+.content-container .img {
+  position: relative;
+  /* background-color: #039593; */
+  right: 10%;
+  background-image: url(./images/glimph4.jpg);
+  width: 35vw;
+  height: 35vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  object-fit: cover;
 }
-
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -195,7 +191,7 @@ cursor: pointer;
   }
 
   .content-container .img {
-  display: none;
+    display: none;
   }
 
   header .nav-list {
@@ -215,8 +211,6 @@ cursor: pointer;
     z-index: 9999; /* Ensure it appears over other content */
   }
 
- 
-
   header .nav-list.show {
     left: 0;
   }
@@ -230,15 +224,15 @@ cursor: pointer;
   }
 
   header .icons .fa-times {
-      position: fixed;
-      display: block;
-      top: 10%;
-      right: 2%;
-      font-size: 2rem;
-      color: rgb(225, 225, 225);
-      cursor: pointer;
-      z-index: 3333333;
-    }
+    position: fixed;
+    display: block;
+    top: 10%;
+    right: 2%;
+    font-size: 2rem;
+    color: rgb(225, 225, 225);
+    cursor: pointer;
+    z-index: 3333333;
+  }
 
   .content-container {
     flex-direction: column;
@@ -262,8 +256,6 @@ cursor: pointer;
     margin-top: 20px;
   }
 }
-
-
 
 /* Internship Section Styles */
 .internship {
@@ -308,8 +300,6 @@ cursor: pointer;
   transform: scale(1.05);
 }
 
-
-
 .project-item.left {
   align-self: flex-start;
 }
@@ -333,15 +323,10 @@ cursor: pointer;
 /* Responsive Design for Internship Section */
 @media (max-width: 768px) {
   .internship-content {
-      width: 80%;
-      padding: 0 20px;
+    width: 80%;
+    padding: 0 20px;
   }
 }
-
-
-
-
-
 
 /* Projects Section Styles */
 /* My Projects Section Styles */
@@ -379,7 +364,7 @@ cursor: pointer;
 }
 
 .myproject-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -428,17 +413,14 @@ cursor: pointer;
 /* Responsive Design */
 @media (max-width: 768px) {
   .myprojects {
-      padding: 20px;
+    padding: 20px;
   }
 
   .myproject-item {
-      padding: 15px;
-      margin-bottom: 15px; /* Space between items on small screens */
+    padding: 15px;
+    margin-bottom: 15px; /* Space between items on small screens */
   }
 }
-
-
-
 
 /* Achievements Section */
 .achievements {
@@ -522,14 +504,6 @@ cursor: pointer;
   }
 }
 
-
-
-
-
-
-
-
-
 /* Interests Section */
 .interests {
   margin-top: 1px;
@@ -567,14 +541,16 @@ cursor: pointer;
 }
 
 .interest-item::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: -2px; bottom: -2px; left: -2px; right: -2px; /* Adjusted for exact fit */
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px; /* Adjusted for exact fit */
   z-index: -1;
   background: linear-gradient(45deg, #dcd6d9, #78787f, #b2dcd3);
   border-radius: 12px; /* Slightly larger than the box itself */
 }
-
 
 .interest-item:hover {
   transform: scale(1.05);
@@ -589,11 +565,12 @@ cursor: pointer;
 }
 
 @keyframes icon-bounce {
-  0%, 100% {
-      transform: translateY(0);
+  0%,
+  100% {
+    transform: translateY(0);
   }
   50% {
-      transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 }
 
@@ -610,22 +587,17 @@ cursor: pointer;
 
 /* Responsive Design for Interests Section */
 @media (max-width: 768px) {
-
   .interests {
     display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 170vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 170vh;
   }
   .interests-content {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
-
-
-
-
 
 /* Contact Section */
 .contact {
@@ -714,7 +686,67 @@ button[type="submit"]:hover {
 /* Responsive Design for Contact Section */
 @media (max-width: 768px) {
   .contact-form {
-      width: 80%;
-      padding: 0 20px;
+    width: 80%;
+    padding: 0 20px;
   }
+}
+
+.fixed-links {
+  position: fixed;
+  right: 20px; /* Distance from the right edge of the screen */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center the container vertically */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between icons */
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.social-icon {
+  text-decoration: none;
+  color: white;
+  font-size: 35px; /* Icon size */
+  transition: color 0.3s; /* Smooth color transition on hover */
+  animation: bounce 3s linear infinite; /* Apply animation */
+  margin: 2px 0;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0); /* Start and end at the original position */
+  }
+  25% {
+    transform: translateY(-10px); /* Move up slightly */
+  }
+  50% {
+    transform: translateY(0); /* Return to original position */
+  }
+  75% {
+    transform: translateY(5px); /* Move down slightly */
+  }
+}
+.fa-code {
+  font-size: 25px;
+}
+
+.social-icon:hover {
+  color: #49f0ff; /* Change color on hover (example for LinkedIn) */
+}
+
+@media (max-width: 768px) {
+  .social-icon {
+    margin: 0px 8px;
+    position: relative;
+    top: -190px;
+  }
+
+  .fixed-links {
+    position: relative;
+    top: 190px;
+    display: flex;
+    flex-direction: row;
+  }
+
+
 }
