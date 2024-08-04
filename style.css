@@ -697,7 +697,7 @@ button[type="submit"]:hover {
   top: 50%; /* Center vertically */
   transform: translateY(-50%); /* Center the container vertically */
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 10px; /* Space between icons */
   z-index: 1000; /* Ensure it stays on top of other content */
 }
