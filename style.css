@@ -697,14 +697,14 @@ button[type="submit"]:hover {
   top: 50%; /* Center vertically */
   transform: translateY(-50%); /* Center the container vertically */
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 10px; /* Space between icons */
   z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 .social-icon {
   text-decoration: none;
-  color: green;
+  color: white;
   font-size: 35px; /* Icon size */
   transition: color 0.3s; /* Smooth color transition on hover */
   animation: bounce 3s linear infinite; /* Apply animation */
